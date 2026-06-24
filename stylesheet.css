@@ -75,12 +75,13 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.15);
+    background: #27272a;
     border-radius: 9999px;
+    transition: background-color 200ms ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: #52525b;
 }
 
 /* Fallback for Firefox */
@@ -203,6 +204,33 @@ a {
     overflow: hidden;
 }
 
+/* F-22 Overlay - positioned on the middle right side */
+.f22-overlay {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 45%;
+    max-width: 60vh;
+    height: auto;
+    opacity: 0.85;
+    z-index: 4;
+    transform: translateY(-50%) scale(1.3);
+}
+
+.f22-overlay img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    .f22-overlay {
+        display: none;
+    }
+}
+
 /* Ambient moody city glow background */
 .hero::before {
     content: '';
@@ -245,6 +273,43 @@ a {
     font-weight: 400;
     color: var(--text-gray);
     margin-bottom: var(--space-xl);
+}
+
+/* Hero Location Block - placed below name */
+.hero-location {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: #71717a;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-location .location-text {
+    white-space: nowrap;
+}
+
+.hero-location img {
+    width: 1.25rem;
+    height: auto;
+    inline-block;
+    border-radius: 0.125rem;
+}
+
+.location-marker {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: #ffffff;
+    white-space: nowrap;
+    margin-left: var(--space-sm);
+}
+
+.material-icons.location-marker-white {
+    color: #ffffff;
+    font-size: 1.25rem;
 }
 
 .status-container {
@@ -333,9 +398,10 @@ a {
 }
 
 .nav-link.secondary:hover {
-    background: var(--border-fine);
+    background: rgba(16, 185, 129, 0.15);
     color: var(--text-white);
-    border-color: var(--text-white);
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
 }
 
 .nav-link.outline {
@@ -456,6 +522,14 @@ a {
     background: var(--bg-secondary);
     border: 1px solid var(--border-fine);
     color: var(--text-gray);
+    transition: all var(--transition-fast);
+}
+
+.skill-tag:hover {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.5);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
 }
 
 /* ========================================
@@ -529,11 +603,19 @@ a {
     background: var(--bg-secondary);
     border: 1px solid var(--border-fine);
     color: var(--text-gray);
+    transition: all var(--transition-fast);
+}
+
+.tech-badge:hover {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.5);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
 }
 
 /* ========================================
-    PROJECT IMAGE WRAPPER STYLES
-    ======================================== */
+   PROJECT IMAGE WRAPPER STYLES
+   ======================================== */
 
 .project-image-wrapper {
     aspect-ratio: 16 / 9;
@@ -552,8 +634,8 @@ a {
 }
 
 /* ========================================
-    PROJECTS SECTION - NEW LAYOUT
-    ======================================== */
+   PROJECTS SECTION - NEW LAYOUT
+   ======================================== */
 
 .grid.two-columns {
     grid-template-columns: repeat(2, 1fr);
@@ -604,8 +686,8 @@ a {
 }
 
 /* ========================================
-    CONTACT SECTION
-    ======================================== */
+   CONTACT SECTION
+   ======================================== */
 
 .contact {
     padding: var(--space-2xl) var(--space-lg);
@@ -629,6 +711,55 @@ a {
 }
 
 /* ========================================
+   MY SETUP SECTION - WORKBENCH
+   ======================================== */
+
+.setup-section {
+    padding: var(--space-2xl) var(--space-lg);
+    border-top: 1px solid var(--border-fine);
+}
+
+.setup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+}
+
+.setup-card {
+    background: #0a0a0a;
+    border: 1px solid #27272a; /* zinc-800 equivalent */
+    padding: var(--space-md);
+    transition: box-shadow var(--transition-base), border-color var(--transition-fast);
+}
+
+.setup-card:hover {
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+    border-color: rgba(16, 185, 129, 0.5);
+}
+
+.card-title {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-white);
+    margin-bottom: var(--space-md);
+}
+
+.setup-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.setup-list li {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: #a1a1aa;
+    line-height: 1.6;
+}
+
+/* ========================================
    FOOTER (Optional)
    ======================================== */
 
@@ -642,48 +773,8 @@ footer {
 }
 
 /* ========================================
-    RESPONSIVE DESIGN
-    ======================================== */
-
-/* ========================================
-    CUSTOM TEXT SELECTION HIGHLIGHT EFFECT
-    Premium green highlight for user text selection
-    ======================================== */
-
-::selection {
-    background-color: rgba(16, 185, 129, 0.3);
-    color: #ffffff;
-}
-
-::-moz-selection {
-    background-color: rgba(16, 185, 129, 0.3);
-    color: #ffffff;
-}
-
-/* Premium glow effect around selection */
-::selection {
-    text-shadow: 
-        0 0 1px rgba(16, 185, 129, 0.8),
-        0 0 4px rgba(16, 185, 129, 0.5);
-}
-
-/* Subtle gradient for premium feel */
-::selection {
-    background-image: 
-        linear-gradient(135deg, 
-            rgba(16, 185, 129, 0.25) 0%,
-            rgba(16, 185, 129, 0.45) 50%,
-            rgba(16, 185, 129, 0.25) 100%);
-    background-size: 100% 200%;
-    background-position: 0 0;
-    animation: selection-gradient 3s ease-in-out infinite alternate;
-}
-
-/* Animation for gradient shimmer effect */
-@keyframes selection-gradient {
-    0% { background-position: 0 0; }
-    100% { background-position: 0 200%; }
-}
+   RESPONSIVE DESIGN
+   ======================================== */
 
 @media (max-width: 900px) {
     .hero-headline {
@@ -745,4 +836,44 @@ footer {
     .grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ========================================
+   CUSTOM TEXT SELECTION HIGHLIGHT EFFECT
+   Premium green highlight for user text selection
+   ======================================== */
+
+::selection {
+    background-color: rgba(16, 185, 129, 0.3);
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background-color: rgba(16, 185, 129, 0.3);
+    color: #ffffff;
+}
+
+/* Premium glow effect around selection */
+::selection {
+    text-shadow: 
+        0 0 1px rgba(16, 185, 129, 0.8),
+        0 0 4px rgba(16, 185, 129, 0.5);
+}
+
+/* Subtle gradient for premium feel */
+::selection {
+    background-image: 
+        linear-gradient(135deg, 
+            rgba(16, 185, 129, 0.25) 0%,
+            rgba(16, 185, 129, 0.45) 50%,
+            rgba(16, 185, 129, 0.25) 100%);
+    background-size: 100% 200%;
+    background-position: 0 0;
+    animation: selection-gradient 3s ease-in-out infinite alternate;
+}
+
+/* Animation for gradient shimmer effect */
+@keyframes selection-gradient {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 200%; }
 }

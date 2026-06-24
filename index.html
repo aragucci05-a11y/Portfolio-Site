@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..700;1,100..700&family=Geist+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..700;1,100..700;1,100..700&family=Geist+Sans:ital,wght@0,100..800;1,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
@@ -23,8 +24,11 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="f22-overlay">
+        <img src="f22final.gif" alt="F-22 Fighter Jet" class="f22-image">
+    </div>
         <svg class="city-skyline" viewBox="0 0 1920 480" preserveAspectRatio="none" aria-hidden="true">
             <path d="M0,360 L0,320 L20,310 L35,305 L55,325 L75,290 L100,300 L130,280 L160,310 L195,270 L230,295 L265,260 L305,285 L350,245 L395,275 L440,235 L485,265 L530,220 L580,250 L630,190 L685,225 L740,175 L795,210 L855,155 L915,195 L975,140 L1040,180 L1105,130 L1165,170 L1230,120 L1295,160 L1360,100 L1430,145 L1495,95 L1560,135 L1625,85 L1690,125 L1755,75 L1815,115 L1870,60 L1920,80 V480 H0 Z" fill="#0d0d0d"/>
             <path d="M50,280 L50,240 L80,235 L80,275" stroke="#1a1a1a" stroke-width="1" fill="none"/>
@@ -41,15 +45,21 @@
             <path d="M1600,240 L1600,200 L1675,195 L1675,235" stroke="#1a1a1a" stroke-width="1" fill="none"/>
         </svg>
         <div class="hero-content">
-            <h2 class="name-header">
-                <span class="name-label">Angelo Ragucci</span>
-            </h2>
+<h2 class="name-header">
+    <span class="name-label">Angelo Ragucci</span>
+</h2>
+
+<div class="hero-location">
+    <i class="material-icons" title="Location">location_on</i>
+    <span class="location-text">New York City</span>
+    <img src="https://flagcdn.com/us.svg" alt="USA Flag" class="w-4 h-auto inline-block rounded-sm">
+</div>
             <h1 class="hero-headline">
                 I build intelligent, data-driven software.
                 </h1>
                 
                 <p class="hero-description">
-                    Building elegant solutions at the intersection of front-end craftsmanship and back-end engineering. Passionate about creating accessible, performant web experiences that solve real problems.
+                    Building elegant solutions at the intersection of front-end craftsmanship and back-end engineering. Passionate about creating accessible, performant software.
                 </p>
                 
                 <div class="status-container">
@@ -112,28 +122,67 @@
 
                 </div>
             </article>
+
+            <!-- My Setup Section - Placed right after About -->
+            <section class="setup-section">
+                <h2 class="section-header"><span class="mono-index">02</span> MY SETUP</h2>
+                
+                <div class="setup-grid">
+
+                    <!-- Hardware Card -->
+                    <article class="card setup-card">
+                        <h3 class="card-title">Hardware</h3>
+                        <ul class="setup-list">
+                            <li><strong>CPU:</strong> Ryzen 7800X3D</li>
+                            <li><strong>GPU:</strong> Radeon RX 9070 XT</li>
+                            <li><strong>RAM:</strong> 32GB DDR5 5000MHz</li>
+                            <li><strong>Storage:</strong> 9TB Total (4TB NVMe Main Drive)</li>
+                        </ul>
+                    </article>
+
+                    <!-- Development Environment Card -->
+                    <article class="card setup-card">
+                        <h3 class="card-title">Development Environment</h3>
+                        <ul class="setup-list">
+                            <li><strong>Operating System:</strong> Windows 10 Pro </li>
+                            <li><strong>Code Editor:</strong> VS Code</li>
+                        </ul>
+                    </article>
+
+                    <!-- Core Utilities Card -->
+                    <article class="card setup-card">
+                        <h3 class="card-title">Core Utilities</h3>
+                        <ul class="setup-list">
+                            <li><strong>Git/GitHub</strong></li>
+                            <li><strong>Cline AI Assistant</strong></li>
+                            <li><strong>LM Studio (Local LLM)</strong></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="container">
-            <h2 class="section-header"><span class="mono-index">02</span> FEATURED PROJECTS</h2>
+            <h2 class="section-header"><span class="mono-index">03</span> FEATURED PROJECTS</h2>
 
             <!-- Featured Projects Grid (2-column layout) -->
             <div class="featured-section">
                 <div class="grid two-columns">
                      <article class="card project-card featured">
-                         <a href="https://aragucci05-a11y.github.io/Earth-Seeker/" target="_blank" class="card-link">
-                             <div class="project-image-wrapper">
-                                 <img src="placeholder-earth.png" alt="Earth Seeker project preview" class="project-preview">
-                             </div>
-                             <header class="project-header">
-                                 <h3 class="project-title">Earth Seeker</h3>
+                        <a href="https://aragucci05-a11y.github.io/Earth-Seeker/" target="_blank" class="card-link">
+                            <div class="project-image-wrapper">
+                                <img src="placeholder-earth.png" alt="Earth Seeker project preview" class="project-preview">
+                            </div>
+                            <header class="project-header">
+                                <h3 class="project-title">Earth Seeker</h3>
                                 <div class="tech-stack">
                                     <span class="tech-badge">HTML</span>
                                     <span class="tech-badge">CSS</span>
                                     <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">Cesium.js</span>
                                 </div>
                             </header>
                             <p class="project-description">An interactive exploration of our planet. This project showcases Earth data visualization with a user-friendly interface designed for intuitive navigation.</p>
@@ -146,14 +195,15 @@
                                <div class="project-image-wrapper">
                                    <img src="placeholder-planetseeker.png" alt="Planet Seeker project preview" class="project-preview">
                               </div>
-                              <header class="project-header">
-                                  <h3 class="project-title">Planet Seeker</h3>
-                                 <div class="tech-stack">
-                                     <span class="tech-badge">HTML</span>
-                                     <span class="tech-badge">CSS</span>
-                                     <span class="tech-badge">JavaScript</span>
-                                 </div>
-                              </header>
+                               <header class="project-header">
+                                   <h3 class="project-title">Planet Seeker</h3>
+                                  <div class="tech-stack">
+                                       <span class="tech-badge">HTML</span>
+                                       <span class="tech-badge">CSS</span>
+                                       <span class="tech-badge">JavaScript</span>
+                                       <span class="tech-badge">Python</span>
+                                   </div>
+                               </header>
                             <p class="project-description">An interactive exploration of our solar system's planets. Built with accessibility and responsive design, showcasing planetary data with an intuitive interface.</p>
                             <a href="https://aragucci05-a11y.github.io/CSC-226-Planets-group-project/" target="_blank" class="nav-link secondary">View Live Project</a>
                         </a>
@@ -168,15 +218,15 @@
                     <div class="project-image-wrapper">
                         <img src="aurora-placeholder.png" alt="Aurora Seeker project preview" class="project-preview">
                     </div>
-                    <header class="project-header wide">
-                        <h3 class="project-title">Aurora Seeker</h3>
-                        <div class="tech-stack">
-                            <span class="tech-badge">Plotly</span>
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">NOAA API</span>
-                        </div>
-                    </header>
+                     <header class="project-header wide">
+                         <h3 class="project-title">Aurora Seeker</h3>
+                         <div class="tech-stack">
+                             <span class="tech-badge">Plotly</span>
+                             <span class="tech-badge">JavaScript</span>
+                             <span class="tech-badge">NOAA API</span>
+                             <span class="tech-badge">Streamlit</span>
+                         </div>
+                     </header>
                     <p class="project-description wide">Real-time aurora probability visualization displaying data from the past 24 hours. This interactive experience showcases aurora activity powered by NOAA's Space Weather Prediction Center.</p>
                     <a href="https://aurora-seeker-vag4ebmq6fcpzjeinqgup6.streamlit.app/" target="_blank" class="nav-link secondary wide">View Live Project</a>
                 </article>
@@ -187,7 +237,7 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-header"><span class="mono-index">03</span> CONTACT</h2>
+            <h2 class="section-header"><span class="mono-index">05</span> CONTACT</h2>
 
             <article class="card contact-card">
                 <p class="meta-label">System ready for collaboration. Choose a communication channel below.</p>
