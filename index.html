@@ -3,137 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Angelo Ragucci - Developer</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..700;1,100..700&family=Geist+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
+
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="nav-wrapper">
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <div class="container">
+            <a href="#hero" class="logo">AR.</a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-text">
-            <h1>Angelo Ragucci</h1>
-            <p>Tech enthusiast and developer</p>
-            <a href="#portfolio" class="cta-button">View My Work</a>
-        </div>
-        <div class="hero-background"></div>
-    </section>
+        <svg class="city-skyline" viewBox="0 0 1920 480" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,360 L0,320 L20,310 L35,305 L55,325 L75,290 L100,300 L130,280 L160,310 L195,270 L230,295 L265,260 L305,285 L350,245 L395,275 L440,235 L485,265 L530,220 L580,250 L630,190 L685,225 L740,175 L795,210 L855,155 L915,195 L975,140 L1040,180 L1105,130 L1165,170 L1230,120 L1295,160 L1360,100 L1430,145 L1495,95 L1560,135 L1625,85 L1690,125 L1755,75 L1815,115 L1870,60 L1920,80 V480 H0 Z" fill="#0d0d0d"/>
+            <path d="M50,280 L50,240 L80,235 L80,275" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+            <path d="M150,260 L150,220 L185,215 L185,255" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+            <path d="M280,240 L280,200 L325,195 L325,235" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+            <path d="M420,220 L420,180 L470,175 L470,215" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+            <path d="M560,200 L560,160 L615,155 L615,195" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+            <path d="M700,180 L700,140 L760,135 L760,175" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+            <path d="M850,220 L850,180 L905,175 L905,215" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+            <path d="M1000,240 L1000,200 L1060,195 L1060,235" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+            <path d="M1150,260 L1150,220 L1215,215 L1215,255" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+            <path d="M1300,280 L1300,240 L1370,235 L1370,275" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+            <path d="M1450,260 L1450,220 L1520,215 L1520,255" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+            <path d="M1600,240 L1600,200 L1675,195 L1675,235" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+        </svg>
+        <div class="hero-content">
+            <h2 class="name-header">
+                <span class="name-label">Angelo Ragucci</span>
+            </h2>
+            <h1 class="hero-headline">
+                I build intelligent, data-driven software.
+                </h1>
+                
+                <p class="hero-description">
+                    Building elegant solutions at the intersection of front-end craftsmanship and back-end engineering. Passionate about creating accessible, performant web experiences that solve real problems.
+                </p>
+                
+                <div class="status-container">
+                    <span class="mono-status-indicator" style="color: #10b981;">● Available for full-stack engineering roles</span>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="nav-link primary">See Work</a>
+                    <a href="#" class="nav-link outline">View Résumé</a>
+                </div>
+            </div>
+        </section>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="about-wrapper">
-            <h2>About Me</h2>
-            <p>I love technology, and learning new things through project based learning.</p>
-            <div class="skills">
-                <div class="skill-item">
-                    <h4>Python</h4>
+        <div class="container">
+            <h2 class="section-header"><span class="mono-index">01</span> ABOUT</h2>
+            
+            <p>I am a student developer working at the intersection of machine learning pipelines, web engineering, and systems architecture. My work spans from data processing and model training to building responsive front-end interfaces and optimizing infrastructure for production deployments.</p>
+
+            <article class="card about-card">
+                <div class="metadata-grid">
+                    <div class="meta-item intelligence-column">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-80"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 5v14"/></svg>
+                        <span class="mono-label">INTELLIGENCE</span>
+                        <div class="meta-list">
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Data Processing</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">NOAA API</span>
+                            <span class="skill-tag">NASA API</span>
+                        </div>
+                    </div>
+
+                    <div class="meta-item web-column">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-80"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+                        <span class="mono-label">WEB</span>
+                        <div class="meta-list">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">Streamlit</span>
+                            <span class="skill-tag">Plotly</span>
+                        </div>
+                    </div>
+
+                    <div class="meta-item infrastructure-column">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-80"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                        <span class="mono-label">INFRASTRUCTURE</span>
+                        <div class="meta-list">
+                            <span class="skill-tag">System Configuration</span>
+                            <span class="skill-tag">Server Hosting</span>
+                            <span class="skill-tag">PC Assembly</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-item">
-                    <h4>JavaScript</h4>
-                </div>
-                <div class="skill-item">
-                    <h4>HTML</h4>
-                </div>
-                <div class="skill-item">
-                    <h4>Presentation Skills</h4>
-                </div>
-                <div class="skill-item">
-                    <h4>PC Assembly</h4>
-                </div>
-                <div class="skill-item">
-                    <h4>Server Hosting</h4>
-                </div>
-            </div>
+            </article>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <h2>Projects:</h2>
-        <div class="projects-container showcase-layout">
-            <!-- Aurora Seeker with Live Demo -->
-            <div class="project-showcase">
-                <div class="showcase-content">
-                    <h3>Aurora Seeker</h3>
-                    <p>Real-time aurora probability visualization displaying data from the past 24 hours. This interactive globe showcases aurora activity powered by NOAA's Space Weather Prediction Center.</p>
-                    <div class="showcase-tech">
-                        <span class="tech-badge">Plotly</span>
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">NOAA API</span>
-                    </div>
-                    <a href="https://aragucci05-a11y.github.io/Aurora-Seeker/" target="_blank" class="showcase-btn">View Live Project</a>
-                </div>
-                <div class="showcase-preview">
-                    <iframe src="https://aragucci05-a11y.github.io/Aurora-Seeker/" title="Aurora Seeker Live Demo"></iframe>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-header"><span class="mono-index">02</span> FEATURED PROJECTS</h2>
+
+            <!-- Featured Projects Grid (2-column layout) -->
+            <div class="featured-section">
+                <div class="grid two-columns">
+                    <article class="card project-card featured">
+                        <a href="https://aragucci05-a11y.github.io/Earth-Seeker/" target="_blank" class="card-link">
+                            <header class="project-header">
+                                <h3 class="project-title">Earth Seeker</h3>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">HTML</span>
+                                    <span class="tech-badge">CSS</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                </div>
+                            </header>
+                            <p class="project-description">An interactive exploration of our planet. This project showcases Earth data visualization with a user-friendly interface designed for intuitive navigation.</p>
+                            <a href="https://aragucci05-a11y.github.io/Earth-Seeker/" target="_blank" class="nav-link secondary">View Live Project</a>
+                        </a>
+                    </article>
+
+                    <article class="card project-card featured">
+                        <a href="https://aragucci05-a11y.github.io/CSC-226-Planets-group-project/" target="_blank" class="card-link">
+                            <header class="project-header">
+                                <h3 class="project-title">Planet Seeker</h3>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">HTML</span>
+                                    <span class="tech-badge">CSS</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">NASA API</span>
+                                </div>
+                            </header>
+                            <p class="project-description">An interactive exploration of our solar system's planets. Built with accessibility and responsive design, showcasing planetary data with an intuitive interface.</p>
+                            <a href="https://aragucci05-a11y.github.io/CSC-226-Planets-group-project/" target="_blank" class="nav-link secondary">View Live Project</a>
+                        </a>
+                    </article>
                 </div>
             </div>
 
-            <!-- Planet Seeker with Live Demo -->
-            <div class="project-showcase">
-                <div class="showcase-content">
-                    <h3>Planet Seeker</h3>
-                    <p>An interactive exploration of our solar system's planets. Built with a focus on accessibility and responsive design, this project showcases planetary data with an intuitive, engaging interface.</p>
-                    <div class="showcase-tech">
-                        <span class="tech-badge">HTML</span>
-                        <span class="tech-badge">CSS</span>
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">NASA API</span>
-                    </div>
-                    <a href="https://aragucci05-a11y.github.io/CSC-226-Planets-group-project/" target="_blank" class="showcase-btn">View Live Project</a>
-                </div>
-                <div class="showcase-preview">
-                    <iframe src="https://aragucci05-a11y.github.io/CSC-226-Planets-group-project/" title="CSC 226 Planets Project"></iframe>
-                </div>
+            <!-- Other Projects Section -->
+            <div class="other-projects-section">
+                <h3 class="section-header other-projects-title"><span class="mono-index">04</span> OTHER PROJECTS</h3>
+                <article class="card project-card featured wide-row">
+                    <header class="project-header wide">
+                        <h3 class="project-title">Aurora Seeker</h3>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Plotly</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">NOAA API</span>
+                        </div>
+                    </header>
+                    <p class="project-description wide">Real-time aurora probability visualization displaying data from the past 24 hours. This interactive experience showcases aurora activity powered by NOAA's Space Weather Prediction Center.</p>
+                    <a href="https://aurora-seeker-vag4ebmq6fcpzjeinqgup6.streamlit.app/" target="_blank" class="nav-link secondary wide">View Live Project</a>
+                </article>
             </div>
         </div>
-
-        <!-- <h2>Other Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-card-header">
-                    <h3>Aurora Seeker</h3>
-                </div>
-                <p>Real-time aurora probability visualization displaying data from the past 24 hours. This interactive globe showcases aurora activity powered by NOAA's Space Weather Prediction Center.</p>
-                <div class="showcase-tech">
-                    <span class="tech-badge">HTML</span>
-                    <span class="tech-badge">CSS</span>
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">NOAA API</span>
-                </div>
-                <a href="https://aragucci05-a11y.github.io/Aurora-Seeker/" target="_blank" class="showcase-btn">View Live Project</a>
-            </div>
-        </div> -->
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <div class="contact-wrapper">
-            <h2>Contact Information</h2>
-            <div class="contact-methods">
-                <span class="contact-btn">aragucci05@gmail.com</span>
-                <a href="https://www.linkedin.com/in/angelo-ragucci-08164a303/" target="_blank" class="contact-btn">LinkedIn</a>
-                <a href="https://github.com/aragucci05-a11y?tab=repositories" target="_blank" class="contact-btn">GitHub</a>
-            </div>
+        <div class="container">
+            <h2 class="section-header"><span class="mono-index">03</span> CONTACT</h2>
+
+            <article class="card contact-card">
+                <p class="meta-label">System ready for collaboration. Choose a communication channel below.</p>
+
+                <div class="contact-links">
+                    <a href="mailto:aragucci05@gmail.com" class="nav-link secondary">aragucci05@gmail.com</a>
+                    
+                    <a href="https://www.linkedin.com/in/angelo-ragucci-08164a303/" target="_blank" class="nav-link secondary">LinkedIn Profile</a>
+                    
+                    <a href="https://github.com/aragucci05-a11y?tab=repositories" target="_blank" class="nav-link secondary">GitHub Repositories</a>
+                </div>
+            </article>
         </div>
     </section>
-
-  
 
     <script src="main.js"></script>
 </body>

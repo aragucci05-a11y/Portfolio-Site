@@ -1,45 +1,52 @@
-// Parallax effect
-window.addEventListener('scroll', function() {
-    const scrollPosition = window.pageYOffset;
-    document.body.style.backgroundPosition = `center ${-scrollPosition * 0.3}px`;
-});
-
-// Mobile menu toggle
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-
-navToggle.addEventListener('click', function() {
-    navLinks.classList.toggle('active');
-});
-
-// Close menu when link is clicked
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', function() {
-        navLinks.classList.remove('active');
-    });
-});
-
-// Toggle project details
-function toggleProjectDetails(element) {
-    const details = element.querySelector('.project-details');
-    const isActive = details.classList.contains('active');
-    
-    // Close all other project details
-    document.querySelectorAll('.project-details.active').forEach(detail => {
-        if (detail !== details) {
-            detail.classList.remove('active');
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            const headerOffset = 100;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
         }
     });
-    
-    // Toggle current project
-    details.classList.toggle('active');
-}
+});
 
-// Close project details when clicking outside
-document.addEventListener('click', function(event) {
-    if (!event.target.closest('.project-item')) {
-        document.querySelectorAll('.project-details.active').forEach(detail => {
-            detail.classList.remove('active');
-        });
+// Remove navbar offset from hero section after load
+window.addEventListener('load', () => {
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        // Hero naturally fills viewport without navbar offset
     }
+});
+
+// Optional: Simple fade-in animation for sections on scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Apply fade-in to sections
+document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    sectionObserver.observe(section);
 });
