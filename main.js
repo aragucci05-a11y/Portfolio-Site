@@ -20,14 +20,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Remove navbar offset from hero section after load
-window.addEventListener('load', () => {
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        // Hero naturally fills viewport without navbar offset
-    }
-});
-
 // Optional: Simple fade-in animation for sections on scroll
 const observerOptions = {
     threshold: 0.1,

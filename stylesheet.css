@@ -183,17 +183,8 @@ a {
 }
 
 /* ========================================
-   HERO SECTION - ABSTRACT CITY BACKGROUND
+   HERO SECTION
    ======================================== */
-
-.city-skyline {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 80px;
-    pointer-events: none;
-}
 
 .hero {
     min-height: 100vh;
@@ -687,68 +678,6 @@ a {
 }
 
 /* ========================================
-   MY SETUP SECTION - WORKBENCH
-   ======================================== */
-
-.setup-section {
-    padding: var(--space-2xl) var(--space-lg);
-    border-top: 1px solid var(--border-fine);
-}
-
-.setup-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-lg);
-}
-
-.setup-card {
-    background: #0a0a0a;
-    border: 1px solid #27272a; /* zinc-800 equivalent */
-    padding: var(--space-md);
-    transition: box-shadow var(--transition-base), border-color var(--transition-fast);
-}
-
-.setup-card:hover {
-    box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
-    border-color: rgba(16, 185, 129, 0.5);
-}
-
-.card-title {
-    font-family: var(--font-sans);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-white);
-    margin-bottom: var(--space-md);
-}
-
-.setup-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-}
-
-.setup-list li {
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
-    color: #a1a1aa;
-    line-height: 1.6;
-}
-
-/* ========================================
-   FOOTER (Optional)
-   ======================================== */
-
-footer {
-    border-top: 1px solid var(--border-fine);
-    padding: var(--space-xl) var(--space-lg);
-    text-align: center;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--text-gray);
-}
-
-/* ========================================
    RESPONSIVE DESIGN
    ======================================== */
 
@@ -814,42 +743,3 @@ footer {
     }
 }
 
-/* ========================================
-   CUSTOM TEXT SELECTION HIGHLIGHT EFFECT
-   Premium green highlight for user text selection
-   ======================================== */
-
-::selection {
-    background-color: rgba(16, 185, 129, 0.3);
-    color: #ffffff;
-}
-
-::-moz-selection {
-    background-color: rgba(16, 185, 129, 0.3);
-    color: #ffffff;
-}
-
-/* Premium glow effect around selection */
-::selection {
-    text-shadow: 
-        0 0 1px rgba(16, 185, 129, 0.8),
-        0 0 4px rgba(16, 185, 129, 0.5);
-}
-
-/* Subtle gradient for premium feel */
-::selection {
-    background-image: 
-        linear-gradient(135deg, 
-            rgba(16, 185, 129, 0.25) 0%,
-            rgba(16, 185, 129, 0.45) 50%,
-            rgba(16, 185, 129, 0.25) 100%);
-    background-size: 100% 200%;
-    background-position: 0 0;
-    animation: selection-gradient 3s ease-in-out infinite alternate;
-}
-
-/* Animation for gradient shimmer effect */
-@keyframes selection-gradient {
-    0% { background-position: 0 0; }
-    100% { background-position: 0 200%; }
-}
