@@ -90,6 +90,17 @@ a {
     scrollbar-color: #3f3f46 #000000;
 }
 
+/* Text selection highlight - green accent */
+::-webkit-selection {
+    background-color: var(--accent-emerald);
+    color: #000000;
+}
+
+::selection {
+    background-color: var(--accent-emerald);
+    color: #ffffff;
+}
+
 /* ========================================
    UTILITY CLASSES
    ======================================== */
@@ -261,8 +272,48 @@ a {
 .hero-location img {
     width: 1.25rem;
     height: auto;
-    inline-block;
+    display: inline-block;
     border-radius: 0.125rem;
+}
+
+.education {
+    padding: var(--space-xl) 0;
+}
+
+.education-card {
+    margin-bottom: var(--space-xl);
+}
+
+.metadata-grid {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.meta-item.single-column {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+}
+
+.meta-item svg {
+    flex-shrink: 0;
+    color: #93c5fd;
+}
+
+.mono-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #a1a1aa;
+    margin-bottom: 0.25rem;
+}
+
+.education-detail {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e4e4e7;
 }
 
 .location-marker {
@@ -430,9 +481,10 @@ a {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-sm); /* Smaller gap for skill tags */
-    
-    /* Responsive: 3 columns on medium screens and up */
-    @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
+    .metadata-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: var(--space-md);
     }
@@ -585,7 +637,7 @@ a {
    ======================================== */
 
 .project-image-wrapper {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16/9;
     width: 100%;
     border-radius: 8px 8px 0 0;
     border-bottom: 1px solid var(--border-fine);
